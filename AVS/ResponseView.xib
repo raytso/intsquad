@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResponseView">
+            <connections>
+                <outlet property="cancelButton" destination="Rs8-cu-MdG" id="ayP-Jr-beG"/>
+                <outlet property="spinningIndicator" destination="Jbq-u9-IWZ" id="fkJ-zu-Yby"/>
+                <outlet property="statusDetailsTextLabel" destination="Ofr-GE-NBT" id="h2p-j7-2dN"/>
+                <outlet property="statusImageView" destination="zrE-CK-NH9" id="Yv5-wJ-KnI"/>
+                <outlet property="statusTextLabel" destination="5DQ-Jc-QU7" id="igH-iE-3h7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zrE-CK-NH9">
+                    <rect key="frame" x="137.5" y="213.5" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="FtU-cb-HyD"/>
+                        <constraint firstAttribute="height" constant="100" id="of1-s8-n1O"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auC-h9-0sr">
+                    <rect key="frame" x="0.0" y="331.5" width="375" height="4"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="pKR-pC-Rdv"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DQ-Jc-QU7">
+                    <rect key="frame" x="151.5" y="345.5" width="73" height="33.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rs8-cu-MdG">
+                    <rect key="frame" x="169.5" y="591" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="HYg-s8-R3z"/>
+                        <constraint firstAttribute="height" constant="36" id="cHd-OW-LUh"/>
+                    </constraints>
+                    <state key="normal" image="Cancel"/>
+                    <connections>
+                        <action selector="returnToSubmitForm:" destination="-1" eventType="touchUpInside" id="WtK-ac-ADU"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Jbq-u9-IWZ">
+                    <rect key="frame" x="169" y="245" width="37" height="37"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ofr-GE-NBT">
+                    <rect key="frame" x="16" y="386" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zrE-CK-NH9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9KD-2G-YZK"/>
+                <constraint firstItem="Jbq-u9-IWZ" firstAttribute="centerX" secondItem="zrE-CK-NH9" secondAttribute="centerX" id="C4R-lk-n5v"/>
+                <constraint firstItem="Jbq-u9-IWZ" firstAttribute="centerY" secondItem="zrE-CK-NH9" secondAttribute="centerY" id="FnR-kn-yAW"/>
+                <constraint firstItem="auC-h9-0sr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Hjd-i0-hk4"/>
+                <constraint firstAttribute="trailing" secondItem="Ofr-GE-NBT" secondAttribute="trailing" constant="16" id="QVX-OI-Da3"/>
+                <constraint firstItem="auC-h9-0sr" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="RLD-L1-R6i"/>
+                <constraint firstItem="auC-h9-0sr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="WZQ-A7-eqX"/>
+                <constraint firstItem="Ofr-GE-NBT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Y0a-Mm-5DP"/>
+                <constraint firstItem="5DQ-Jc-QU7" firstAttribute="centerX" secondItem="zrE-CK-NH9" secondAttribute="centerX" id="YPe-93-AeX"/>
+                <constraint firstItem="5DQ-Jc-QU7" firstAttribute="top" secondItem="zrE-CK-NH9" secondAttribute="bottom" constant="32" id="aiu-qG-3vB"/>
+                <constraint firstAttribute="bottom" secondItem="Rs8-cu-MdG" secondAttribute="bottom" constant="40" id="hHU-Is-Rsf"/>
+                <constraint firstItem="auC-h9-0sr" firstAttribute="top" secondItem="zrE-CK-NH9" secondAttribute="centerY" constant="68" id="heO-1A-eCn"/>
+                <constraint firstItem="Rs8-cu-MdG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wDC-aS-gN2"/>
+                <constraint firstItem="Ofr-GE-NBT" firstAttribute="top" secondItem="5DQ-Jc-QU7" secondAttribute="bottom" constant="7" id="xBZ-mq-Eeh"/>
+                <constraint firstItem="Ofr-GE-NBT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="xE2-WO-euy"/>
+            </constraints>
+            <point key="canvasLocation" x="-42.5" y="-21.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Cancel" width="25" height="25"/>
+    </resources>
+</document>
